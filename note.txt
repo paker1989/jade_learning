@@ -1,0 +1,6 @@
+申明标签: doctype html
+用缩进两格表示层次关系
+
+jade **.jade --> 编译成html   
+jade -P **.jade --> 不缩进html，增加可读性
+jade -P -w **.jade --> -w watch file changes and re-compile
