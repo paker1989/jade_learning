@@ -4,3 +4,8 @@
 jade **.jade --> 编译成html   
 jade -P **.jade --> 不缩进html，增加可读性
 jade -P -w **.jade --> -w watch file changes and re-compile
+
+属性中id和class可以直接h1.classname#id这么写，别的在括号中写，属性之间用,隔开。
+标签后面加. 然后另起一行缩进，就可以放大段文本了。
+
+注释

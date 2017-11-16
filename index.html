@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta>
-    <title> index jade </title>
-  </head>
-</html>
+<html></html><!--[if IE 8]><html class='ie8'><![end if]--> 
+<!--[if IE 9]><html class='ie9'><![end if]--> 
+<!--[if IE]><!--><html><!--<![end if]--> 
+<head>
+  <meta charset="utf-8">
+  <title> index jade </title>
+</head>
 <body>
-  <h1> jade engine study sdsd</h1>
-</body>
+  <style>
+    body {
+      color: #ff6600;
+    }
+  </style>
+  <scirpt>var jadeVersion = '1.1';</scirpt>
+  <h1>注释</h1>
+  <h2>单行注释</h2>
+  <!-- h1#title.title2.title(style="display:none;")  jade engine study sdsd -->
+  <h2>非缓冲注释</h2>
+  <div id="divId" class="divClass"></div>
+  <h2>块注释</h2>
+  <!--
+  a(href='http://companion.3ds.com',tile='immoc jade',data-uid='1000') link
+  input(name='course',type='text',value='jade')
+  input(name='type',type='checkbox', checked)
+  -->
+  <p>
+    上面2节我们已经掌握 JS 模块和 CSS 模块的处理，
+    并且能够让 CSS 独立生成文件了，<span>haha</span>
+    现在我们觉得每次修改代码然后 build
+  </p>
+  <p>1. A<strong>1.1 A1</strong>2. B
+    3. C
+  </p>
+</body></html>
