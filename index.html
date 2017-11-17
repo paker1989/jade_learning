@@ -4,7 +4,10 @@
 <!--[if IE]><!--><html><!--<![end if]--> 
 <head>
   <meta charset="utf-8">
-  <title> index jade </title>
+  <title>
+     index JADE FROM JSON 
+    study
+  </title>
 </head>
 <body>
   <style>
@@ -13,6 +16,41 @@
     }
   </style>
   <scirpt>var jadeVersion = '1.1';</scirpt>
+  <h2>for each</h2>
+  <p>value1</p>
+  <p>value2</p>
+  <p>key1 : value1</p>
+  <p>key2 : value2</p>
+  <p>node</p>
+  <p>jade</p>
+  <p>socket.io</p>
+  <dl>
+    <dt>1</dt>
+    <dl>item1</dl>
+    <dl>item2</dl>
+  </dl>
+  <dl>
+    <dt>2</dt>
+    <dl>item3</dl>
+    <dl>item4</dl>
+  </dl>
+  <h2>while用法</h2>
+  <ul>
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <h2>转义</h2>
+  <p>data is &lt;script&gt;alert(&quot;haha&quot;)&lt;/script&gt;</p>
+  <p>&lt;script&gt;alert(&quot;haha&quot;)&lt;/script&gt;</p>
+  <p><script>alert("haha")</script></p>
+  <p><script>alert("haha")</script></p>
+  <p>#{htmlData}</p>
+  <p>!{htmlData}</p>
+  <input value="undefined">
+  <!-- 直接=，则undefined的时候就留空了，instead of display undefined-->
+  <input>
   <h1>注释</h1>
   <h2>单行注释</h2>
   <!-- h1#title.title2.title(style="display:none;")  jade engine study sdsd -->

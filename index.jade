@@ -5,7 +5,9 @@ html
 <!--[if IE]><!--><html><!--<![end if]--> 
 head
   meta(charset='utf-8')
-  title  index jade 
+  //- var course = 'jade'
+  title  index #{course.toUpperCase()} 
+   | study
 body
   style.
    body {
@@ -13,6 +15,42 @@ body
    }
   scirpt.
    var jadeVersion = '1.1';
+  h2 for each
+  - var values = {'key1':'value1','key2':'value2'};
+  - for (key in values)
+    p= values[key]
+
+  each value, key in values
+    p #{key} : #{value}
+
+  - var fw = ['node','jade','socket.io']
+  each item in fw
+    p= item
+    
+  - var res = [{id:1,items:['item1','item2']},{id:2,items:['item3','item4']}]
+  each ele in res.length > 0 ? res : []
+   dl
+    dt= ele.id
+    each item in ele.items
+     dl= item
+     
+  h2 while用法
+  - var n = 0
+  ul
+   while n < 4
+    li= n++
+    
+  h2 转义
+  - var htmlData = '<script>alert("haha")</script>'
+  p data is #{htmlData}
+  p= htmlData
+  p !{htmlData}
+  p!= htmlData
+  p \#{htmlData}
+  p \!{htmlData}
+  input(value='#{course1}') 
+  // 直接=，则undefined的时候就留空了，instead of display undefined
+  input(value=course1)
   h1 注释
   h2 单行注释
   // h1#title.title2.title(style="display:none;")  jade engine study sdsd 

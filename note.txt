@@ -9,3 +9,34 @@ jade -P -w **.jade --> -w watch file changes and re-compile
 标签后面加. 然后另起一行缩进，就可以放大段文本了。
 
 注释
+//
+//-
+
+声明变量 - var course = 'jade'
+使用变量 #{course.toUpperCase()}
+
+也可以在命令行中传入变量
+jade index.jade -w -P --obj '{"course":"jade"}'
+
+或者用json
+jade index.jade -P -w -O data.json
+
+如果在命令行中传入了变量和文档中的变量冲突的话，优先考虑文档中的值
+
+转义 如果想不转义, 则 !{varName}; 或者 标签!= varName (e.g. p!= varName)
+
+如果不想jade编译#{}, 则加一个\ (e.g. p \!{varName}, p \#{varName})
+
+如果不想undefined的时候输出undefined，则直接 = (e.g. input(value=varName))
+
+条件输出
+if else
+unless
+
+
+mixin:
+mixin varName
+
+引用mixin:
+ +varName
+&attributes
