@@ -1,10 +1,31 @@
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    title if else presentation
-  
-  body
+extends layout
+
+block content
+    include style
+      style.
+        body {
+          color: #333;
+        }
+    include title.html
+    block desc
+      p desc from ifElse
+    block desc
+
+    //引用runtime.js
+    #runtime
+    script(src="node_modules/jade/runtime.js")
+    script(src="./runtime.js")
+    script.
+      var runtimeNode = document.getElementById('runtime');
+      var runtimeHtml = template({isRuntime: true});
+      runtimeNode.innerHTML = runtimeHtml;
+    //过滤器
+    //markdown
+    :markdown
+      Hi, this is **XU Bin**, [zhihu](
+       http://zhihu.com
+      )
+
     // mixin
     mixin lesson
       p immoc jade study

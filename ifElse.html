@@ -1,42 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>if else presentation</title>
-  </head>
-  <body>
-    <!-- mixin-->
-        <p>immoc jade study</p>
-        <p>jade</p>
-        <ul class="courses">
-          <li>循环</li>
-          <li>标签</li>
-        </ul>
-    <!-- 嵌套mixin-->
-        <p>xu bin</p>
-            <p>xu bin</p>
-            <ul class="courses">
-              <li>jade</li>
-              <li>nodejs</li>
-            </ul>
-    <!-- 内联嵌套-->
-        <h4>I'm slogan!</h4>
-        <p>I'm a block there!</p>
-    <!--嵌套 使用attributes-->
-        <p calss="attrClass1">useAttr</p>
-        <p class="attrClass1">useAttrs</p>
-    <!--嵌套 参数-->
-        <ul class="unsure args presentation">
-          <li>current argument is : arg1</li>
-          <li>current argument is : arg2</li>
-          <li>current argument is : arg3</li>
-        </ul>
-    <!-- 流程-->
-    <h3>if Else</h3>
-    <p>jade, node</p>
-    <h3>unless</h3>
-    <p>2</p>
-    <h3>case</h3>
-    <p>Hi jade!</p>
-  </body>
-</html>
+<html></html><!--[if IE 8]><html class='ie8'><![end if]--> 
+<!--[if IE 9]><html class='ie9'><![end if]--> 
+<!--[if IE]><!--><html><!--<![end if]--> 
+<head>
+  <meta charset="utf-8">
+  <!-- - var course = 'jade'-->
+  <title> index JADE FROM JSON </title>study
+</head>
+<body>
+  <p>desc from ifElse</p>
+  <style>
+    h3 {
+        color: #555;
+    }
+  </style>
+  <style>
+    body {
+      color: #333;
+    }
+  </style><div>
+    <h3>come from title.html</h3>
+</div>
+  <p>desc from ifElse</p>
+  <p>desc from ifElse</p>
+  <!--引用runtime.js-->
+  <div id="runtime"></div>
+  <script src="node_modules/jade/runtime.js"></script>
+  <script src="./runtime.js"></script>
+  <script>
+    var runtimeNode = document.getElementById('runtime');
+    var runtimeHtml = template({isRuntime: true});
+    runtimeNode.innerHTML = runtimeHtml;
+  </script>
+  <!--过滤器-->
+  <!--markdown--><p>Hi, this is <strong>XU Bin</strong>, <a href="
+ http://zhihu.com
+">zhihu</a></p>
+  <!-- mixin-->
+    <p>immoc jade study</p>
+    <p>jade</p>
+    <ul class="courses">
+      <li>循环</li>
+      <li>标签</li>
+    </ul>
+  <!-- 嵌套mixin-->
+    <p>xu bin</p>
+      <p>xu bin</p>
+      <ul class="courses">
+        <li>jade</li>
+        <li>nodejs</li>
+      </ul>
+  <!-- 内联嵌套-->
+    <h4>I'm slogan!</h4>
+    <p>I'm a block there!</p>
+  <!--嵌套 使用attributes-->
+    <p calss="attrClass1">useAttr</p>
+    <p class="attrClass1">useAttrs</p>
+  <!--嵌套 参数-->
+    <ul class="unsure args presentation">
+      <li>current argument is : arg1</li>
+      <li>current argument is : arg2</li>
+      <li>current argument is : arg3</li>
+    </ul>
+  <!-- 流程-->
+  <h3>if Else</h3>
+  <p>jade, node</p>
+  <h3>unless</h3>
+  <p>2</p>
+  <h3>case</h3>
+  <p>Hi jade!</p>
+</body></html>

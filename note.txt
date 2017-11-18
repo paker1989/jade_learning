@@ -34,9 +34,48 @@ if else
 unless
 
 
-mixin:
+mixin
 mixin varName
 
 引用mixin:
  +varName
 &attributes
+
+模板继承
+block, extends关键字
+模板包含 include
+
+jade API: 
+ - compile(source, options)
+ - compileFile(path, options)
+ - compileClient(source, options)
+ - render(source, options)
+ - renderFile(fileName, options)
+
+ 过滤器: 开头用:
+ 
+在runtime下用jade:
+编译成js: jade --client/-c --no-debug/-D **.jade:
+
+    #runtime
+    script(src="node_modules/jade/runtime.js")
+    script(src="./runtime.js")
+    script.
+      var runtimeNode = document.getElementById('runtime');
+      var runtimeHtml = template({isRuntime: true});
+      runtimeNode.innerHTML = runtimeHtml;
+
+
+如何将html页面编译成jade模板
+npm install html2jade -g
+
+-> html2jade html2jade.html
+-> html2jade http://www.zhihu.com > zhihu.jade
+
+/* html2jade API: convertHtml, convertDocument */
+->     html2jade.convertHtml(html, {}, function (err, jade) {
+        if (!err) {
+           console.log(jade)
+        }
+    })
+
